@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #FF0000;
+    text-align:center;
+}
+
+li {
+    float: center;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+input[type=text] {
+    width: 250px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+button{
+    width: 150px;
+    box-sizing: border-box;
+    border: 10px solid white;
+    border-radius: 4px;
+    font-size: 20px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    color:black;
+
+}
+
+
+input[type=text]:focus {
+    width: 50%;
+}
+
+div {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+  text-align: center;
+  background-color: #FF0000;
+  border: 3px solid #FF0000;
+  color:#FFFFFF;
+
+}
+
+</style>
+</head>
+<body>
+    <img src="https://www.bicing.cat/sites/all/themes/bicing/images/branding-vodafone/logo-banner.jpg"  style="width:100%;height:100%;">
+    <header>
+    <div id="title" class="container">
+        <h1>BICING MANAGEMENT</h1>
+        <h2>Project – Development of a distributed application integrating Bicing, Twitter and Telegram services</h2>
+    </div>
+</header><!-- /header -->
+
+     <script>
+      function redirectlink(){
+
+        window.location.replace("http://localhost:15000/clients/notify/" + document.getElementById("phoneNumber").value)
+      }
+    </script>
+
+<ul class="nav">
+  <li><a href="http://localhost:15000/stations/get">Get stations</a></li>
+  <li><a href="http://localhost:15000/stations/stats">Stations stats</a></li>
+  <li><a href="http://localhost:15000/clients/get">Get clients</a></li>
+  <li><a href="">Subscribe client</a></li>
+  </br>
+  <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Enter phone number" >
+  <button onclick="redirectlink()" >Notify client</button>
+  <br></br>
+  <br></br>
+  <br></br>
+
+</ul>
+</body>
+<footer>
+    <div>
+        <span>
+            &copy; 2016, DAD-Project-CarlosPulido- NiccoloMagnoni<br>
+        </span>
+    </div>
+</footer><!-- /footer -->
+</html>
+
+
+
